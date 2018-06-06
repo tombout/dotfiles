@@ -1,0 +1,141 @@
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Runtime {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let path = expand('<sfile>:p:h')
+let includes = path."/includes"
+execute 'set runtimepath+='.path
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Basic settings {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+
+set encoding=utf8
+
+" Use Unix as the standard file type
+set fileformats=unix,dos,mac
+
+let mapleader = ","
+
+set history=100
+
+" Enable omni completion
+set omnifunc=syntaxcomplete#Complete
+
+set hidden
+
+" Turn backup off
+set nobackup
+set nowb
+set noswapfile
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Filetypes {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
+
+augroup filetype_vim
+        autocmd!
+        autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+augroup filetype_text
+        autocmd!
+        autocmd FileType text setlocal textwidth=78
+augroup END
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntax {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Searching {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ignore case when searching
+set ignorecase
+
+" Highlight search results
+set hlsearch
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Buffer {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Specify the behavior when switching between buffers
+set switchbuf=useopen,usetab,split
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Plugins {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute 'source '.includes.'/plugins.vim'
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Mappings {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute 'source '.includes.'/keys.vim'
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => User interface {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
+
+" Height of the command bar
+set cmdheight=2
+
+" Show no tabs (as suggested by vim-ctrlspace)
+set showtabline=0
+
+" Disable visual bell
+set vb t_vb=
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Text formatting / displaying {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set autoindent
+set smartindent
+
+" Always use spaces instead of tabs
+set expandtab
+set nosmarttab
+
+" Linebreak on 500 characters
+set linebreak
+
+set wrap
+" }}}
+
+""""""""""""""""""""""""""""""
+" => Status line {{{
+""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+
+"set statusline=
+"set statusline+=\ %F
+"set statusline+=%m\
+"set statusline+=%=
+"set statusline+=\ %y
+"set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+"set statusline+=\[%{&fileformat}\]
+"set statusline+=\ %p%%
+"set statusline+=\ %l:%c
+"set statusline+=\
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Autocmds {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" }}}"

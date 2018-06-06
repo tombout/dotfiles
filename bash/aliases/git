@@ -1,0 +1,8 @@
+alias gadd='git add'
+alias gaddall='git add .'
+alias gstatus='git status'
+alias gcommit='git commit -v'
+alias gamend='git commit --amend'
+alias gpull='git pull'
+alias gpush='git push'
+alias gdiff='git diff'
