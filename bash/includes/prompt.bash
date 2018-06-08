@@ -85,20 +85,25 @@ function parse_git_dirty {
 ############################################################
 # Prompt
 ############################################################
-PS1="["                         # [
+PS1="${GREEN}"                  # color change
+PS1="$PS1["                     # [
 PS1="$PS1\u"                    # username
 PS1="$PS1@"                     # @
 PS1="$PS1\h"                    # host
 PS1="$PS1]"                     # ]
+PS1="$PS1${YELLOW}"             # color change
 PS1="$PS1["                     # [
 PS1="$PS1\w"                    # working directory
 PS1="$PS1]"                     # ]
+PS1="$PS1${CYAN}"               # color change
 PS1="$PS1\`parse_git_branch\`"  # git branch / status
+PS1="$PS1${EMMAGENTA}"          # color change
 PS1="$PS1["                     # [
 PS1="$PS1\#"                    # command number
 PS1="$PS1 "                     # space
 PS1="$PS1\!"                    # history number
 PS1="$PS1]"                     # ]
+PS1="$PS1${RESET}"              # reset color
 PS1="$PS1\n"                    # new line
 PS1="$PS1\$"                    # $ for normal user / # for root
 PS1="$PS1 "                     # space
