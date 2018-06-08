@@ -2,8 +2,7 @@
 
 set -e
 
-DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd -P)"
-source ${DOTFILES_DIR}/utilities.sh
+dotfiles_dir="$(cd "$(dirname "$0")" && pwd -P)"
 
-append_to_file ${DOTFILES_DIR}/vim/source.template ~/.vimrc
-append_to_file ${DOTFILES_DIR}/bash/source.template ~/.bashrc
+source ${dotfiles_dir}/vim/install.sh
+source ${dotfiles_dir}/bash/install.sh

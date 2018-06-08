@@ -1,1 +1,0 @@
-test -f ${DOTFILES_DIR}/bash/bashrc && source ${DOTFILES_DIR}/bash/bashrc
