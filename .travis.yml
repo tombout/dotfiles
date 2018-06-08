@@ -1,0 +1,10 @@
+language: bash
+before_install:
+  - mkdir -p libs/test
+  - git clone -b 'v0.4.0' --single-branch --depth 1 https://github.com/sstephenson/bats libs/test/bats
+  - git clone -b 'v0.3.0' --single-branch --depth 1 https://github.com/ztombol/bats-support libs/test/bats-support
+  - git clone -b 'v0.3.0' --single-branch --depth 1 https://github.com/ztombol/bats-assert libs/test/bats-assert
+before_script:
+  - export PATH="${PWD}/libs/test/bats/bin:${PATH}"
+script:
+  - bats test
