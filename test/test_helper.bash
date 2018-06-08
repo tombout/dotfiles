@@ -6,7 +6,7 @@ test_target_file=""
 setup() {
     echo "in test_helper setup"
 
-    test_target_file=$(mktemp)
+    test_target_file=".target_test_${RANDOM}"
 
     # Load dependencies.
     load "${bats_libs_dir}/bats-support/load.bash"
