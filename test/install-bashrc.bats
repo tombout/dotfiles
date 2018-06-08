@@ -6,7 +6,7 @@ install_script="${dotfiles_dir}/bash/install.sh"
 
 expected_result=$(cat << EOFVIMRC_RESULT
 # Do not edit under this line
-test -f ${dotfiles_dir}/bash/bashrc && source ${dotfiles_dir}/bash/bashrc
+test -f "${dotfiles_dir}/bash/bashrc.bash" && source "${dotfiles_dir}/bash/bashrc.bash"
 
 EOFVIMRC_RESULT
 )

@@ -7,7 +7,7 @@ target_file=${1:-$default_target_file}
 
 bashrc_append=$(cat << EOFVIMRC
 # Do not edit under this line
-test -f ${script_dir}/bashrc && source ${script_dir}/bashrc
+test -f "${script_dir}/bashrc.bash" && source "${script_dir}/bashrc.bash"
 
 EOFVIMRC
 )

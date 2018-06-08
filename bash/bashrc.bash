@@ -19,8 +19,8 @@ shopt -s checkwinsize
 # Kill ssh-agent on exit
 trap "kill $SSH_AGENT_PID" SIGHUP
 
-[[ -f "$INCLUDES/prompt" ]] && source "$INCLUDES/prompt"
-[[ -f "$INCLUDES/history" ]] && source "$INCLUDES/history"
+[[ -f "$INCLUDES/prompt.bash" ]] && source "$INCLUDES/prompt.bash"
+[[ -f "$INCLUDES/history.bash" ]] && source "$INCLUDES/history.bash"
 
 # Source all aliases
 [[ -d "$ALIASES" ]] && for f in "$ALIASES"/*; do source "$f"; done
