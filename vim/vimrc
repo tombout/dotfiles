@@ -90,6 +90,10 @@ execute 'source '.includes.'/keys.vim'
 " => User interface {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set background=dark
+try
+    colorscheme solarized
+catch
+endtry
 
 " Height of the command bar
 set cmdheight=2
