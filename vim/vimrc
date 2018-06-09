@@ -12,11 +12,6 @@ execute 'set runtimepath+='.path
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 
-set encoding=utf8
-
-" Use Unix as the standard file type
-set fileformats=unix,dos,mac
-
 let mapleader = ","
 
 set history=100
@@ -39,6 +34,15 @@ set noswapfile
 filetype plugin on
 filetype indent on
 
+" Enable syntax highlighting
+syntax enable
+
+" Default file encoding
+set encoding=utf8
+
+" Use Unix as the standard file type
+set fileformats=unix,dos,mac
+
 augroup filetype_vim
         autocmd!
         autocmd FileType vim setlocal foldmethod=marker
@@ -48,13 +52,6 @@ augroup filetype_text
         autocmd!
         autocmd FileType text setlocal textwidth=78
 augroup END
-" }}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Syntax {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -98,6 +95,9 @@ endtry
 " Height of the command bar
 set cmdheight=2
 
+" Always show the status line
+set laststatus=2
+
 " Show a block cursor in normal mode and a line cursor in insert mode
 let &t_ti.="\e[1 q"
 let &t_SI.="\e[5 q"
@@ -125,24 +125,6 @@ set nosmarttab
 set linebreak
 
 set wrap
-" }}}
-
-""""""""""""""""""""""""""""""
-" => Status line {{{
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-"set statusline=
-"set statusline+=\ %F
-"set statusline+=%m\
-"set statusline+=%=
-"set statusline+=\ %y
-"set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-"set statusline+=\[%{&fileformat}\]
-"set statusline+=\ %p%%
-"set statusline+=\ %l:%c
-"set statusline+=\
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
