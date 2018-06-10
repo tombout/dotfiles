@@ -1,5 +1,8 @@
 #@IgnoreInspection BashAddShebang
 
+# Use same language on all systems
+export LANG=en_US.uft8
+
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
