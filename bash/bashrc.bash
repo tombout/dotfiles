@@ -6,6 +6,9 @@ export LANG=en_US.uft8
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
+# Use vim as default editor
+export EDITOR=vim
+
 machine="$(uname -s)"
 
 # check the window size after each command and, if necessary,
