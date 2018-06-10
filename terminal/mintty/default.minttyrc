@@ -1,13 +1,27 @@
 # Mintty configuration file, used for example by git-bash or Cygwin
 # For available options see: http://mintty.github.io/mintty.1.html#CONFIGURATION
+
+# Set TERM environment variable
+Term=xterm-256color
+
+# Do not use bold fonts
 BoldAsFont=no
+
+# Underlined and blinking cursor
 CursorType=line
 CursorBlinks=yes
+
+# Default to 120 columns and 40 rows
+Columns=120
+Rows=40
+
+# Right hand side scrollbar
+Scrollbar=right
+
+ScrollbackLines=20000
+
 FontHeight=9
 Locale=en_US
 Charset=UTF-8
-Columns=120
-Rows=40
-ScrollbackLines=20000
-Term=xterm-256color
+
 BellType=0

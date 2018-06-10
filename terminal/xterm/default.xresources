@@ -1,0 +1,25 @@
+!! For available options see
+!! https://invisible-island.net/xterm/manpage/xterm.html#h2-RESOURCES
+
+! Set TERM environment variable
+XTerm.termName: xterm-256color
+
+! Do not use bold fonts
+XTerm.vt100.allowBoldFonts: false
+
+! Underlined and blinking cursor
+XTerm.vt100.cursorBlink : true
+XTerm.vt100.cursorUnderLine : true
+
+! Default to 120 columns and 40 rows
+XTerm.vt100.geometry: 120x40
+
+! Right hand side scrollbar
+XTerm.vt100.rightScrollBar: true
+XTerm.vt100.ScrollBar: true
+XTerm.vt100.scrollBarBorder: 2
+
+XTerm.vt100.saveLines: 20000
+
+XTerm.vt100.faceName: Liberation Mono
+XTerm.vt100.faceSize: 15
