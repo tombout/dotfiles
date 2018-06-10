@@ -1,5 +1,5 @@
 # ignore duplicate commands, ignore commands starting with a space
-export HISTCONTROL=ignoredups
+export HISTCONTROL=ignoredups:erasedups
 
 # keep the last 5000 entries
 export HISTSIZE=5000
