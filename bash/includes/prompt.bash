@@ -83,6 +83,19 @@ function parse_git_dirty {
 # }}}
 
 ############################################################
+# Terminal title
+############################################################
+# If this is an xterm set the title to user@host:dir
+case $TERM in
+    xterm*)
+        termtitle='\[\033]0;\u@\h:\w\007\]'
+        ;;
+    *)
+        termtitle=''
+        ;;
+esac
+
+############################################################
 # Prompt
 ############################################################
 PS1="${GREEN}"                  # color change
@@ -108,3 +121,4 @@ PS1="$PS1\n"                    # new line
 PS1="$PS1\$"                    # $ for normal user / # for root
 PS1="$PS1 "                     # space
 
+export PS1="${termtitle}${PS1}"
