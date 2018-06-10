@@ -34,9 +34,6 @@ set noswapfile
 filetype plugin on
 filetype indent on
 
-" Enable syntax highlighting
-syntax enable
-
 " Default file encoding
 set encoding=utf8
 
@@ -52,6 +49,15 @@ augroup filetype_text
         autocmd!
         autocmd FileType text setlocal textwidth=78
 augroup END
+" }}}
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors {{{
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Use only the 16 colors that are defined in terminal theme
+set t_Co=16
+set background=dark
+syntax enable
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -86,12 +92,6 @@ execute 'source '.includes.'/keys.vim'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => User interface {{{
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set background=dark
-try
-    colorscheme solarized
-catch
-endtry
-
 " Height of the command bar
 set cmdheight=2
 

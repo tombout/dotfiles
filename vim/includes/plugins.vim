@@ -9,7 +9,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'https://github.com/vim-ctrlspace/vim-ctrlspace'
-Plug 'https://github.com/altercation/vim-colors-solarized'
 call plug#end()
 " }}}
 
@@ -20,10 +19,4 @@ call plug#end()
 let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
 let g:CtrlSpaceSaveWorkspaceOnExit = 1
-" }}}
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => vim-colors-solarized {{{
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:solarized_termcolors=16
 " }}}
