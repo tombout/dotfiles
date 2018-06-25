@@ -11,6 +11,9 @@ nnoremap <leader>q :q<cr>
 
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
+
+" Replace capital W with w
+cnoreabbrev W w
 " }}}
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
