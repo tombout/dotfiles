@@ -15,16 +15,12 @@ machine="$(uname -s)"
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-# Start ssh-agent if not already running
-[[ -n ${SSH_AGENT_PID} ]] || eval "$(ssh-agent -s)" > /dev/null
-# Kill ssh-agent on exit
-trap "kill $SSH_AGENT_PID" SIGHUP
-
 # Remember that this script is sourced from ~/.bashrc
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 includes="$script_dir/includes"
 aliases="$script_dir/aliases"
 
+[[ -f "$includes/ssh-agent.bash" ]] && source "$includes/ssh-agent.bash"
 [[ -f "$includes/prompt.bash" ]] && source "$includes/prompt.bash"
 [[ -f "$includes/history.bash" ]] && source "$includes/history.bash"
 

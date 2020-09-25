@@ -101,8 +101,8 @@ esac
 PS1="${GREEN}"                  # color change
 PS1="$PS1["                     # [
 PS1="$PS1\u"                    # username
-PS1="$PS1@"                     # @
-PS1="$PS1\h"                    # host
+PS1="$PS1@ubuntu"                     # @
+#PS1="$PS1\h"                   # host
 PS1="$PS1]"                     # ]
 PS1="$PS1${YELLOW}"             # color change
 PS1="$PS1["                     # [
