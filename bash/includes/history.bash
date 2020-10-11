@@ -1,8 +1,17 @@
-# ignore duplicate commands, ignore commands starting with a space
-export HISTCONTROL=ignoredups:erasedups
+# https://www.gnu.org/software/bash/manual/bash.html#index-HISTCONTROL
+HISTCONTROL=erasedups
 
-# keep the last 5000 entries
-export HISTSIZE=5000
+# https://www.gnu.org/software/bash/manual/bash.html#index-HISTSIZE
+HISTSIZE=1000
 
-# append to the history instead of overwriting (good for multiple connections)
+# https://www.gnu.org/software/bash/manual/bash.html#index-HISTFILESIZE
+HISTFILESIZE=2000
+
+# https://www.gnu.org/software/bash/manual/bash.html#index-HISTTIMEFORMAT
+HISTTIMEFORMAT="%d/%m/%y %T "
+
+# https://www.gnu.org/software/bash/manual/bash.html#index-HISTIGNORE
+HISTIGNORE="ls:pwd:ll:cd"
+
+# https://www.gnu.org/software/bash/manual/bash.html#The-Shopt-Builtin-1
 shopt -s histappend
